@@ -1,0 +1,8 @@
+find-prometheus-containers:
+  environment:
+    - CONTAINERS=Prometheus:cadvisor:8080 Prometheus:node-exporter:9100
+    - DIR=/json
+    - DOCKERCLOUD_AUTH=asdf
+  volumes:
+    - ./files:/json
+  image: 78bb6856b2f0
